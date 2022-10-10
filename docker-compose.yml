@@ -1,5 +1,6 @@
 #postgresqlで設定する
 version: '3.7'
+#サービス名を指定
 services:
 db:
   image: postgres:12.2
