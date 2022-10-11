@@ -1,12 +1,15 @@
+//datasourceとは、
 datasource db {
   provider = "sqlite"
   url      = "file:dev.db"
 }
 
+//generatorとは、マイグレーションファイルを作成するためのコマンド
 generator client {
   provider        = "prisma-client-js"
 }
 
+//modelとは、データベースのテーブルを表す
 model Account {
   id                 String  @id @default(cuid())
   userId             String
