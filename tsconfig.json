@@ -1,10 +1,44 @@
 {
+  /*   
+   　　"compilerOptions": {
+      "target": "es5",targetとは、コンパイルの対象のこと？
+      "module": "commonjs" moduleとは、モジュールのこと？
+      "lib": [
+         "es2015",
+         "dom"
+      ],libとは、ライブラリのこと？
+      "outDir": "dist",outDirとは、出力先のディレクトリのこと？
+      "rootDir": "src",rootDirとは、ルートディレクトリのこと？
+      "strict": false,strickとは、厳密
+      "esModuleInterop": true,esModuleInteropとは、ESモジュールのインターフェースのこと？
+      "skipLibCheck": true,skipLibCheckとは、ライブラリのチェックをスキップすること？
+      "forceConsistentCasingInFileNames": true,forceConsistentCasingInFileNamesとは、ファイル名の一貫性を強制すること？
+      "noImplicitReturns": true,noImplicitReturnsとは、暗黙的な戻り値を許可しないこと？
+      "noFallthroughCasesInSwitch": true,noFallthroughCasesInSwitchとは、スイッチ文のケースの落ちないこと？
+      "noUnusedLocals": true,noUnusedLocalsとは、未使用のローカル変数を許可しないこと？
+      "noUnusedParameters": true,noUnusedParametersとは、未使用のパラメータを許可しないこと？
+      "noImplicitAny": true,noImplicitAnyとは、暗黙的なanyを許可しないこと？
+      "noImplicitThis": true,noImplicitThisとは、暗黙的なthisを許可しないこと？
+      "noImplicitReturns": true,noImplicitReturnsとは、暗黙的な戻り値を許可しないこと？
+      "noEmit": true,noEmitとは、出力を許可しないこと？
+      "moduleResolution": "node",moduleResolutionとは、モジュールの解決のこと？
+      "resolveJsonModule": true,resolveJsonModuleとは、JSONモジュールの解決のこと？
+      "isolatedModules": true,isolatedModulesとは、モジュールを分離すること？
+      "jsx": "react",
+      "baseUrl": ".",
+      "paths": {
+         "@/*": [
+            "src/*"
+         ],pathsとは、パス、パスとは、ファイルの場所のこと？
+      }
+   },
+   */
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,//true
+    "strict": false, //true
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -16,5 +50,5 @@
     "incremental": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/hello.js"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules","excludeとは、除外のこと"]
 }
