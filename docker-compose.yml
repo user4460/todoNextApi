@@ -9,7 +9,7 @@ db:
   image: postgres:12.2
   #portsとは、ポートの設定、コンテナのポートとホストのポートを紐付ける
   ports:
-    - '5432:5432'
+    - '5433:5432'
   #restartとは、コンテナの再起動設定
   restart: always
   #volumesとは、コンテナのボリュームを設定する
@@ -19,3 +19,30 @@ db:
 services: null
 #postgresqlで設定する
 version: '3.7'
+
+#yamlの記法を守る、docker-composeも
+
+#nest
+#docker-composeの起動コマンド　docker-compose up -d
+#postgresqlで設定する
+#version: "3"
+
+#サービス名を指定
+#services: 
+#dbとは、
+#db:
+  #environmentとは、コンテナの環境変数を設定する
+  #environment:
+    #POSTGRES_DB: todoNext
+    #POSTGRES_PASSWORD: root
+    #POSTGRES_USER: user4460
+  #imageとは、docker hubから取得するイメージの名前
+  #image: postgres
+  #portsとは、ポートの設定、コンテナのポートとホストのポートを紐付ける
+  #ports:
+   # - 5432:5432
+  #restartとは、コンテナの再起動設定
+  #restart: always
+  #volumesとは、コンテナのボリュームを設定する
+  #volumes:
+    #- db-data:/var/lib/postgresql/data
