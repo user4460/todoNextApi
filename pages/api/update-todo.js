@@ -2,6 +2,7 @@
 import type { NextApiHandler } from "next"
 import prisma from "../../libs/prisma"
 
+//
 const handler: NextApiHandler = async (req, res) => {
    if (!req.body.id) {
       res.status(400).send("Bad Request. need id!");

@@ -2,6 +2,8 @@
 import { NextApiHandler } from "next"
 import prisma from "../../libs/prisma"
 
+//req.bodyには、クライアントから送られてきたデータが入っている
+//res.status(200)で、クライアントに200番のステータスコードを返す
 const handler = async (req, res) => {
    try {
       await prisma.todo.create({ data: { ...req.body, updatedAt: new Date() } })
