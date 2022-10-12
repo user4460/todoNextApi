@@ -9,7 +9,7 @@ import {
    createUserWithEmailAndPassword,
    onAuthStateChanged
 } from "firebase/auth";
-import  auth  from "../../FirebaseConfig.js";
+import auth from "../../FirebaseConfig.js";
 /* 「Link」をimport↓ */
 //import { Navigate } from "react-router-dom";
 import Link from 'next/link';
@@ -20,7 +20,7 @@ const Register = () => {
    const [registerPassword, setRegisterPassword] = useState("");
 
    //handleSubmitで登録ボタンを押した時の処理
-   const handleSubmit = async(e) => {
+   const handleSubmit = async (e) => {
       e.preventDefault();
 
       //メールとパスワードを入力項目の間違いのエラー処理
@@ -50,37 +50,37 @@ const Register = () => {
    return (
       <>
          {
-         //ログインしてるか確認しルーティングを変える
-         //
+            //ログインしてるか確認しルーティングを変える
+            //
 
-         user ? (<Link href={`/mypage/`} /> ) : (
-            <>
-               <h1>新規登録</h1>
-               {/* メールアドレスとパスワードを入力するフォーム */}
-               <form onSubmit={handleSubmit}>
-                  <div>
-                     <label>メールアドレス</label>
-                     <input
-                        name="email"
-                        type="email"
-                        value={registerEmail}
-                        onChange={(e) => setRegisterEmail(e.target.value)}
-                     />
-                  </div>
-                  <div>
-                     <label>パスワード</label>
-                     <input
-                        name="password"
-                        type="password"
-                        value={registerPassword}
-                        onChange={(e) => setRegisterPassword(e.target.value)}
-                     />
-                  </div>
-                  <button>登録する</button>
-                  {/* ログインリンクを追加 */}
-                  <p>ログインは<Link href={`/signin/`}>こちら</Link></p>
-               </form>
-            </>
+            user ? (<Link href={`/mypage/`} />) : (
+               <>
+                  <h1>新規登録</h1>
+                  {/* メールアドレスとパスワードを入力するフォーム */}
+                  <form onSubmit={handleSubmit}>
+                     <div>
+                        <label>メールアドレス</label>
+                        <input
+                           name="email"
+                           type="email"
+                           value={registerEmail}
+                           onChange={(e) => setRegisterEmail(e.target.value)}
+                        />
+                     </div>
+                     <div>
+                        <label>パスワード</label>
+                        <input
+                           name="password"
+                           type="password"
+                           value={registerPassword}
+                           onChange={(e) => setRegisterPassword(e.target.value)}
+                        />
+                     </div>
+                     <button>登録する</button>
+                     {/* ログインリンクを追加 */}
+                     <p>ログインは<Link href={`/signin/`}>こちら</Link></p>
+                  </form>
+               </>
                //
             )
          }

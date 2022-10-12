@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 //signInWithEmailAndPasswordは、メールアドレスとパスワードを使用して、ユーザーをサインインします。
 //onAuthStateChangedは、ユーザーのログイン状態が変更されたときに呼び出されるリスナーを登録します。
-import {signInWithEmailAndPassword,onAuthStateChanged} from "firebase/auth";
+import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../FirebaseConfig.js";
 
 /* 「Link」をimport↓ */
@@ -54,49 +54,49 @@ const Login = () => {
       return signInWithRedirect(auth, provider);
    }
    //handleGoogleLogin出来なかったらエラー
-   const ggHandleLogin = ()=> {
+   const ggHandleLogin = () => {
       ggLogin().catch((error) => console.error(error));
    };
-   
+
    {/*完了・サービス名／ロゴ・ログインフォーム・ID入力欄・パスワード入力欄・Googleログインボタン・新規ユーザー登録ボタン・ローダー"
    未完了　ローダー*/}
-   
+
    return (
       <>
          { //
 
             user ? (<Link href={`/mypage/`} />) : (
-            <>
-               <h1>ログインページ</h1>
-               {/* メールアドレスとパスワードを入力するフォーム */}
-               <form onSubmit={handleSubmit}>
-                  <div>
-                     <label>メールアドレス</label>
-                     <input
-                        name="email"
-                        type="email"
-                        value={loginEmail}
-                        onChange={(e) => setLoginEmail(e.target.value)}
-                     />
-                  </div>
-                  <div>
-                     <label>パスワード</label>
-                     <input
-                        name="password"
-                        type="password"
-                        value={loginPassword}
-                        onChange={(e) => setLoginPassword(e.target.value)}
-                     />
-                  </div>
-                  <button>ログイン</button><br></br>
-                  {/* ggログインボタン */}
-                  <button onClick={ggHandleLogin}>ggログイン</button>
+               <>
+                  <h1>ログインページ</h1>
+                  {/* メールアドレスとパスワードを入力するフォーム */}
+                  <form onSubmit={handleSubmit}>
+                     <div>
+                        <label>メールアドレス</label>
+                        <input
+                           name="email"
+                           type="email"
+                           value={loginEmail}
+                           onChange={(e) => setLoginEmail(e.target.value)}
+                        />
+                     </div>
+                     <div>
+                        <label>パスワード</label>
+                        <input
+                           name="password"
+                           type="password"
+                           value={loginPassword}
+                           onChange={(e) => setLoginPassword(e.target.value)}
+                        />
+                     </div>
+                     <button>ログイン</button><br></br>
+                     {/* ggログインボタン */}
+                     <button onClick={ggHandleLogin}>ggログイン</button>
 
-                  {/* 新規登録リンクを追加 */}
-                  <p>新規登録は<Link href={`/signup/`}>こちら</Link></p>
-               </form>
-               {/* */}
-            </>
+                     {/* 新規登録リンクを追加 */}
+                     <p>新規登録は<Link href={`/signup/`}>こちら</Link></p>
+                  </form>
+                  {/* */}
+               </>
                //
             )
          }
