@@ -12,6 +12,7 @@
 //}
 
 //datasourceとは、
+//file:とは、
 datasource db {
   provider = "sqlite"
   url      = "file:dev.db"
