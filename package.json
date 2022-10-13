@@ -1,8 +1,11 @@
 {
   "name": "api",
   "version": "0.1.0",
+  "comment1":"privateとは、npm publishを実行したときに、公開されないようにするためのフラグ",
+  "comment2":"フラグとは、",
   "private": true,
   "scripts": {
+    "comment": "devとは、開発のこと",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -20,6 +23,9 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "recoil": "^0.7.5"
+  },
+  "comment": {
+    "comment": "@typesとは、型のこと"
   },
   "devDependencies": {
     "@types/node": "18.7.23",

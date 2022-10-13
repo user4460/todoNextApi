@@ -23,6 +23,9 @@ generator client {
   provider        = "prisma-client-js"
 }
 
+//stringとは、文字列
+//
+
 //modelとは、データベースのテーブルを表す
 model Account {
   id                 String  @id @default(cuid())
