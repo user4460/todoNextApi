@@ -4,7 +4,9 @@ import prisma from "../../libs/prisma"
 
 const handler = async (req, res) => {
    try {
+      //prisma.todo.deleteとは、prismaのtodoモデルに対して、deleteメソッドを実行するという意味
       await prisma.todo.delete({ where: { id: req.body.id } })
+      //res.status().send()とは、クライアントにステータスコードとデータを返すという意味
       res.status(200).send("ok");
    } catch (error) {
       console.log(error)
