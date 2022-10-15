@@ -1,8 +1,8 @@
 {
   "name": "api",
   "version": "0.1.0",
-  "comment1":"privateとは、npm publishを実行したときに、公開されないようにするためのフラグ",
-  "comment2":"フラグとは、",
+  "comment1": "privateとは、npm publishを実行したときに、公開されないようにするためのフラグ",
+  "comment2": "フラグとは、",
   "private": true,
   "scripts": {
     "comment": "devとは、開発のこと",
@@ -20,6 +20,7 @@
     "framer-motion": "^7.5.3",
     "next": "12.3.1",
     "next-auth": "^4.13.0",
+    "next-test-api-route-handler": "^3.1.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "recoil": "^0.7.5"
