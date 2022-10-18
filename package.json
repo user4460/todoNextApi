@@ -5,12 +5,12 @@
   "comment2": "フラグとは、",
   "private": true,
   "scripts": {
-    "comment": "devとは、開発のこと",
     "dev": "next dev",
+    "test": "jest",
+    "cypress:open": "cypress open",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "test": "jest"
+    "lint": "next lint"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.3.5",
